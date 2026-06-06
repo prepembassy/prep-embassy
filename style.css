@@ -1,4 +1,4 @@
-/* IMPORT ELEGANCKEJ CZCIONKI Z POPRZEDNIEGO SZABLONU */
+/* IMPORT CZCIONKI Z POPRZEDNIEJ WERSJI */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
 /* RESET I USTAWIENIA PODSTAWOWE */
@@ -15,14 +15,14 @@ body {
     line-height: 1.6;
 }
 
-/* NAWIGACJA BANER GÓRNY - BARDZIEJ WYRAŹNY */
+/* NAWIGACJA (BELKA NA GÓRZE) - CZYTELNA I WYRAŹNA */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 22px 8%;
     background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -36,7 +36,7 @@ nav {
 .logo-bold {
     font-size: 24px;
     font-weight: 800;
-    color: #1e40af; /* Głęboki Royal Blue */
+    color: #1e40af; /* Royal Blue */
     letter-spacing: -0.5px;
 }
 
@@ -48,70 +48,49 @@ nav {
     margin-top: -2px;
 }
 
-/* WYRAŹNIEJSZE ZAKŁADKI */
+/* BARDZO WYRAŹNE ZAKŁADKI MENU */
 .nav-links a {
     text-decoration: none;
-    color: #1e293b; /* Ciemniejszy, bardziej wyrazisty kolor */
+    color: #1e293b;
     margin: 0 16px;
-    font-weight: 600; /* Grubsza czcionka dla lepszej widoczności */
+    font-weight: 700; /* Pogrubione zakładki */
     font-size: 15px;
-    transition: all 0.25s ease;
-    position: relative;
-    padding: 4px 0;
+    transition: color 0.25s ease;
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #2563eb; /* Królewski błękit akcentowy */
-}
-
-/* Subtelna linia pod aktywną zakładką przy najechaniu */
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #2563eb;
-    transition: width 0.25s ease;
-}
-
-.nav-links a:hover::after, .nav-links a.active::after {
-    width: 100%;
+    color: #2563eb;
 }
 
 /* PRZYCISK CTA W NAWIGACJI */
 .btn-nav {
     background-color: #0b57d0;
     color: #ffffff !important;
-    padding: 12px 22px;
+    padding: 12px 24px;
     border-radius: 8px;
     font-weight: 700 !important;
     font-size: 14px !important;
-    box-shadow: 0 4px 12px rgba(11, 87, 208, 0.15);
     transition: all 0.2s ease;
 }
 
 .btn-nav:hover {
     background-color: #1d4ed8;
     transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(11, 87, 208, 0.25);
 }
 
-/* HERO SECTION */
+/* HERO SECTION - DUŻA I PRZESTRZENNA */
 .hero {
-    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    background: #ffffff;
     padding: 80px 8%;
-    min-height: 80vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
-    overflow: hidden;
 }
 
 .hero-container {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 60px;
+    gap: 50px;
     align-items: center;
     width: 100%;
 }
@@ -123,7 +102,6 @@ nav {
     border-radius: 30px;
     font-weight: 700;
     font-size: 13px;
-    letter-spacing: 0.5px;
     display: inline-block;
     margin-bottom: 20px;
 }
@@ -142,7 +120,6 @@ nav {
     color: #475569;
     line-height: 1.6;
     margin-bottom: 30px;
-    max-width: 540px;
 }
 
 .hero-features {
@@ -172,44 +149,7 @@ nav {
     gap: 16px;
 }
 
-.btn-primary {
-    background-color: #0b57d0;
-    color: #ffffff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 15px;
-    display: inline-block;
-    box-shadow: 0 4px 14px rgba(11, 87, 208, 0.2);
-    transition: all 0.2s ease;
-}
-
-.btn-primary:hover {
-    background-color: #1c54b2;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(11, 87, 208, 0.3);
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #0b57d0;
-    border: 2px solid #0b57d0;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 15px;
-    display: inline-block;
-    transition: all 0.2s ease;
-}
-
-.btn-secondary:hover {
-    background-color: rgba(11, 87, 208, 0.05);
-    transform: translateY(-2px);
-}
-
-/* DYNAMICZNE I DUŻE ZDJĘCIE HERO */
+/* DYNAMICZNE, DUŻE ZDJĘCIE */
 .hero-image-wrapper {
     position: relative;
     display: flex;
@@ -220,21 +160,14 @@ nav {
 
 .hero-main-img {
     width: 100%;
-    max-width: 520px; /* Zwiększone z 420px dla lepszego efektu */
+    max-width: 500px; /* Duży, dopasowany rozmiar */
     height: auto;
-    max-height: 500px;
-    border-radius: 20px; /* Piękne zaokrąglenie z poprzedniego szablonu */
+    border-radius: 24px; /* Piękne zaokrąglenie */
     object-fit: cover;
-    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
-    border: 6px solid #ffffff; /* Ramka premium */
-    transition: transform 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
 }
 
-.hero-image-wrapper:hover .hero-main-img {
-    transform: scale(1.02); /* Delikatny dynamiczny ruch przy najechaniu */
-}
-
-/* BOCZNE INTEGRALNE STATYSTYKI */
+/* KAFELKI STATYSTYK NA ZDJĘCIU */
 .hero-stats-sidebar {
     position: absolute;
     right: -20px;
@@ -247,70 +180,61 @@ nav {
 .stat-box-premium {
     background: #2563eb; /* Królewski błękit */
     color: #ffffff;
-    padding: 16px 24px;
-    border-radius: 14px;
+    padding: 16px 22px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
-    gap: 16px;
-    min-width: 210px;
-    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.25);
-    transition: transform 0.2s ease;
-}
-
-.stat-box-premium:hover {
-    transform: translateX(-5px);
+    gap: 14px;
+    min-width: 200px;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
 }
 
 .stat-box-premium i {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     color: #ffffff;
 }
 
 .stat-box-premium h3 {
     font-size: 22px;
     font-weight: 800;
-    line-height: 1.1;
 }
 
 .stat-box-premium p {
     font-size: 12px;
     opacity: 0.9;
-    font-weight: 500;
 }
 
-/* SIATKA KAFELKÓW */
+/* SIATKA KAFELKÓW OFERTY */
 .main-programmes {
     padding: 80px 8%;
-    background-color: #ffffff;
+    background-color: #f8fafc;
 }
 
 .programme-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 25px;
 }
 
 .programme-card {
-    background: #f8fafc;
+    background: #ffffff;
     padding: 35px;
-    border-radius: 16px;
+    border-radius: 18px;
     border: 1px solid #e2e8f0;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+    transition: transform 0.25s ease;
 }
 
 .programme-card:hover {
     transform: translateY(-5px);
-    background: #ffffff;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.04);
-    border-color: #cbd5e1;
 }
 
 .icon-container-blue {
     background: #eff6ff;
     color: #2563eb;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -318,48 +242,22 @@ nav {
     margin-bottom: 20px;
 }
 
-.programme-card h3 {
-    font-size: 18px;
-    color: #0f172a;
-    margin-bottom: 12px;
-    font-weight: 700;
-}
-
-.programme-card p {
-    color: #475569;
-    font-size: 14px;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.card-action-link {
-    color: #0b57d0;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-}
-
-/* PRZEDMIOTY */
+/* SEKCJA PRZEDMIOTÓW */
 .subjects-section {
     padding: 80px 8%;
-    background: #f8fafc;
+    background: #ffffff;
 }
 
 .subjects-section h2 {
     font-size: 32px;
-    color: #0f172a;
-    margin-bottom: 40px;
     font-weight: 800;
-    letter-spacing: -0.5px;
+    margin-bottom: 40px;
 }
 
 .subjects-layout {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 45px;
+    gap: 40px;
 }
 
 .items-grid-container {
@@ -369,30 +267,25 @@ nav {
 }
 
 .single-subject-box {
-    background-color: #ffffff;
+    background-color: #f8fafc;
     padding: 18px 24px;
     border-radius: 12px;
     font-weight: 600;
-    font-size: 15px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
     border: 1px solid #e2e8f0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
 }
 
 .single-subject-box i {
     color: #2563eb;
-    width: 20px;
-    height: 20px;
 }
 
-/* BANER REZERWACJI REFRESHED */
+/* BANER REZERWACJI */
 .cta-banner-blue {
-    background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+    background-color: #dbeafe;
     padding: 40px;
     border-radius: 18px;
-    border: 1px solid #bfdbfe;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -408,82 +301,3 @@ nav {
 .cta-banner-blue p {
     color: #1e40af;
     margin-bottom: 24px;
-    font-size: 15px;
-    line-height: 1.5;
-}
-
-.cta-banner-blue .btn-primary {
-    align-self: flex-start;
-}
-
-.all-subjects-footer {
-    margin-top: 35px;
-}
-
-.all-subjects-footer a {
-    color: #0b57d0;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 15px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-}
-
-/* DOLNY NIEBIESKI PAS ATUTÓW */
-.premium-benefits-bar {
-    padding: 50px 8%;
-    background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
-    color: #ffffff;
-}
-
-.benefits-flex-wrap {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 35px;
-}
-
-.single-benefit {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-}
-
-.single-benefit i {
-    color: #eff6ff;
-    width: 28px;
-    height: 28px;
-    flex-shrink: 0;
-}
-
-.single-benefit h4 {
-    font-size: 16px;
-    margin-bottom: 6px;
-    font-weight: 700;
-}
-
-.single-benefit p {
-    font-size: 13px;
-    opacity: 0.85;
-    line-height: 1.5;
-}
-
-/* FOOTER */
-footer {
-    background-color: #0f172a;
-    color: #94a3b8;
-    text-align: center;
-    padding: 30px;
-    font-size: 14px;
-    border-top: 1px solid #1e293b;
-}
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-    .hero-container, .subjects-layout { grid-template-columns: 1fr; gap: 40px; }
-    .hero-stats-sidebar { position: static; margin-top: 20px; width: 100%; }
-    .hero-text h1 { font-size: 38px; }
-    nav { flex-direction: column; gap: 16px; padding: 15px; }
-    .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .nav-links a { margin: 5px 10px; }
-}
