@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
+/* RESET I USTAWIENIA PODSTAWOWE */
 * {
     margin: 0;
     padding: 0;
@@ -11,8 +12,10 @@ body {
     background-color: #ffffff;
     color: #0f172a;
     line-height: 1.5;
+    -webkit-text-size-adjust: 100%; /* Zapobiega dziwnemu skalowaniu tekstu na iOS */
 }
 
+/* NAWIGACJA (GÓRNA BELKA) */
 nav {
     display: flex;
     justify-content: space-between;
@@ -48,8 +51,12 @@ nav {
     font-weight: 700 !important;
     font-size: 14px !important;
     text-decoration: none;
+    transition: background-color 0.2s ease;
 }
 
+.btn-nav:hover { background-color: #1d4ed8; }
+
+/* HERO SECTION (SEKCJA GŁÓWNA) */
 .hero {
     background: linear-gradient(180deg, #f0f4ff 0%, #ffffff 100%);
     padding: 60px 8%;
@@ -106,7 +113,11 @@ nav {
     text-decoration: none;
     border-radius: 8px;
     font-weight: 700;
+    display: inline-block;
+    transition: background-color 0.2s ease;
 }
+
+.btn-primary:hover { background-color: #1c54b2; }
 
 .btn-secondary {
     color: #0b57d0;
@@ -115,8 +126,13 @@ nav {
     text-decoration: none;
     border-radius: 8px;
     font-weight: 700;
+    display: inline-block;
+    transition: all 0.2s ease;
 }
 
+.btn-secondary:hover { background-color: rgba(11, 87, 208, 0.04); }
+
+/* SEKCJA ZDJĘCIA I STATYSTYK */
 .hero-image-wrapper {
     position: relative;
     display: flex;
@@ -151,83 +167,8 @@ nav {
     align-items: center;
     gap: 15px;
     min-width: 190px;
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
 }
 
 .stat-box-premium i { width: 22px; height: 22px; }
-.stat-box-premium h3 { font-size: 22px; font-weight: 800; }
-.stat-box-premium p { font-size: 11px; }
-
-.main-programmes { padding: 60px 8%; background-color: #ffffff; }
-.programme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
-
-.programme-card {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-}
-
-.icon-container-blue {
-    background-color: #eff6ff;
-    color: #2563eb;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-}
-
-.programme-card h3 { font-size: 18px; margin-bottom: 10px; font-weight: 700; }
-.programme-card p { color: #64748b; font-size: 13.5px; margin-bottom: 15px; }
-.card-action-link { color: #0b57d0; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 4px; }
-
-.subjects-section { padding: 60px 8%; background: #ffffff; border-top: 1px solid #f1f5f9; }
-.subjects-section h2 { font-size: 26px; margin-bottom: 35px; font-weight: 800; }
-.subjects-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; }
-.items-grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
-
-.single-subject-box {
-    background-color: #ffffff;
-    padding: 16px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border: 1px solid #e2e8f0;
-}
-
-.single-subject-box i { color: #2563eb; width: 18px; height: 18px; }
-
-.cta-banner-blue {
-    background-color: #dbeafe;
-    padding: 40px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.cta-banner-blue h3 { font-size: 22px; color: #1e3a8a; font-weight: 800; margin-bottom: 8px; }
-.cta-banner-blue p { color: #1e40af; margin-bottom: 20px; }
-.cta-banner-blue .btn-primary { align-self: flex-start; }
-
-.all-subjects-footer { margin-top: 25px; }
-.all-subjects-footer a { color: #0b57d0; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 4px; }
-
-.premium-benefits-bar { padding: 35px 8%; background: linear-gradient(90deg, #1e40af 0%, #3b82f6 100%); color: #ffffff; }
-.benefits-flex-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 25px; }
-.single-benefit { display: flex; gap: 12px; align-items: flex-start; }
-.single-benefit i { color: #ffffff; width: 24px; height: 24px; flex-shrink: 0; }
-.single-benefit h4 { font-size: 14.5px; margin-bottom: 4px; font-weight: 700; }
-.single-benefit p { font-size: 12px; opacity: 0.85; }
-
-footer { background-color: #0f172a; color: #94a3b8; text-align: center; padding: 25px; font-size: 13px; }
-
-@media (max-width: 992px) {
-    .hero-container, .subjects-layout { grid-template-columns: 1fr; }
-    .hero-stats-sidebar { position: static; margin-top: 20px; width: 100%; }
-    nav { flex-direction: column; gap: 12px; }
-}
+.stat-box-premium h3 { font
