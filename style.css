@@ -12,7 +12,8 @@ body {
     background-color: #ffffff;
     color: #0f172a;
     line-height: 1.5;
-    -webkit-text-size-adjust: 100%; /* Zapobiega dziwnemu skalowaniu tekstu na iOS */
+    overflow-x: hidden; /* Blokuje przewijanie strony na boki na telefonie */
+    -webkit-text-size-adjust: 100%;
 }
 
 /* NAWIGACJA (GÓRNA BELKA) */
@@ -31,6 +32,11 @@ nav {
 .logo { display: flex; flex-direction: column; }
 .logo-bold { font-size: 24px; font-weight: 800; color: #1e40af; letter-spacing: -0.5px; }
 .logo-sub { font-size: 10px; color: #64748b; letter-spacing: 2px; font-weight: 700; margin-top: -2px; }
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
 
 .nav-links a {
     text-decoration: none;
@@ -52,6 +58,7 @@ nav {
     font-size: 14px !important;
     text-decoration: none;
     transition: background-color 0.2s ease;
+    display: inline-block;
 }
 
 .btn-nav:hover { background-color: #1d4ed8; }
@@ -170,5 +177,167 @@ nav {
     box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
 }
 
-.stat-box-premium i { width: 22px; height: 22px; }
-.stat-box-premium h3 { font
+.stat-box-premium i { width: 22px; height: 22px; color: #ffffff; }
+.stat-box-premium h3 { font-size: 22px; font-weight: 800; line-height: 1; }
+.stat-box-premium p { font-size: 11px; }
+
+/* KAFELKI GŁÓWNE */
+.main-programmes { padding: 60px 8%; background-color: #ffffff; }
+.programme-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
+
+.programme-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.icon-container-blue {
+    background-color: #eff6ff;
+    color: #2563eb;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.programme-card h3 { font-size: 18px; margin-bottom: 10px; font-weight: 700; }
+.programme-card p { color: #64748b; font-size: 13.5px; margin-bottom: 15px; }
+.card-action-link { color: #0b57d0; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 4px; }
+
+/* PRZEDMIOTY */
+.subjects-section { padding: 60px 8%; background: #ffffff; border-top: 1px solid #f1f5f9; }
+.subjects-section h2 { font-size: 26px; margin-bottom: 35px; font-weight: 800; }
+.subjects-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; }
+.items-grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+
+.single-subject-box {
+    background-color: #ffffff;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.single-subject-box i { color: #2563eb; width: 18px; height: 18px; }
+
+.cta-banner-blue {
+    background-color: #dbeafe;
+    padding: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cta-banner-blue h3 { font-size: 22px; color: #1e3a8a; font-weight: 800; margin-bottom: 8px; }
+.cta-banner-blue p { color: #1e40af; margin-bottom: 20px; }
+.cta-banner-blue .btn-primary { align-self: flex-start; }
+
+.all-subjects-footer { margin-top: 25px; }
+.all-subjects-footer a { color: #0b57d0; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 4px; }
+
+/* PASEK BENEFITÓW */
+.premium-benefits-bar { padding: 35px 8%; background: linear-gradient(90deg, #1e40af 0%, #3b82f6 100%); color: #ffffff; }
+.benefits-flex-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 25px; }
+.single-benefit { display: flex; gap: 12px; align-items: flex-start; }
+.single-benefit i { color: #ffffff; width: 24px; height: 24px; flex-shrink: 0; }
+.single-benefit h4 { font-size: 14.5px; margin-bottom: 4px; font-weight: 700; }
+.single-benefit p { font-size: 12px; opacity: 0.85; }
+
+footer { background-color: #0f172a; color: #94a3b8; text-align: center; padding: 25px; font-size: 13px; }
+
+
+/* ==========================================================================
+   KOMPLETNA NAPRAWA RESPONSYWNOŚCI MOBILNEJ (DLA EKRANÓW PONIŻEJ 992px)
+   ========================================================================== */
+
+@media (max-width: 992px) {
+    /* 1. CAŁKOWITA NAPRAWA MENU GÓRNEGO */
+    nav {
+        flex-direction: column;
+        gap: 16px;
+        padding: 20px 5%;
+        text-align: center;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin: 5px 0;
+    }
+    
+    .nav-links a {
+        margin: 4px 6px;
+        font-size: 14px;
+    }
+
+    .btn-nav {
+        width: 100%;
+        max-width: 340px;
+        text-align: center;
+    }
+
+    /* 2. UKŁAD HERO NA JEDNĄ KOLUMNĘ */
+    .hero {
+        padding: 40px 5%;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 32px; /* Zmniejszenie, aby pasowało do ekranu smartfona */
+    }
+
+    .hero-description {
+        font-size: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-features {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 3. NAPRAWA ZDJĘCIA I STATYSTYK (STATYSTYKI POD SPÓD, BEZ WYCHODZENIA ZA EKRAN) */
+    .hero-image-wrapper {
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+    }
+
+    .hero-main-img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero-stats-sidebar {
+        position: relative; /* Zmiana z absolute na relative naprawia błąd rozjeżdżania */
+        right: 0;
+        width: 100%;
