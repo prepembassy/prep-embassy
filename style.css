@@ -1,28 +1,25 @@
-/* IMPORT CZCIONKI Z POPRZEDNIEJ WERSJI */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
-
 /* RESET I USTAWIENIA PODSTAWOWE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    background-color: #f8fafc;
-    color: #0f172a;
-    line-height: 1.6;
+    background-color: #f0f4f8;
+    color: #1e293b;
+    line-height: 1.5;
 }
 
-/* NAWIGACJA (BELKA NA GÓRZE) - CZYTELNA I WYRAŹNA */
+/* NAWIGACJA BANER GÓRNY */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 8%;
+    padding: 15px 8%;
     background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -34,243 +31,299 @@ nav {
 }
 
 .logo-bold {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 800;
-    color: #1e40af; /* Royal Blue */
-    letter-spacing: -0.5px;
+    color: #1e40af; /* Głęboki Royal Blue */
 }
 
 .logo-sub {
     font-size: 10px;
     color: #64748b;
-    letter-spacing: 2px;
-    font-weight: 700;
-    margin-top: -2px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
 }
 
-/* BARDZO WYRAŹNE ZAKŁADKI MENU */
 .nav-links a {
     text-decoration: none;
-    color: #1e293b;
-    margin: 0 16px;
-    font-weight: 700; /* Pogrubione zakładki */
-    font-size: 15px;
-    transition: color 0.25s ease;
+    color: #334155;
+    margin: 0 12px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.2s;
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #2563eb;
+    color: #2563eb; /* Jasny błękit akcentowy */
 }
 
 /* PRZYCISK CTA W NAWIGACJI */
 .btn-nav {
-    background-color: #0b57d0;
+    background-color: #0b57d0; /* Królewski błękit */
     color: #ffffff !important;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 700 !important;
-    font-size: 14px !important;
-    transition: all 0.2s ease;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    transition: background 0.2s;
 }
 
 .btn-nav:hover {
     background-color: #1d4ed8;
-    transform: translateY(-1px);
 }
 
-/* HERO SECTION - DUŻA I PRZESTRZENNA */
+/* HERO SECTION */
 .hero {
     background: #ffffff;
-    padding: 80px 8%;
-    min-height: 75vh;
-    display: flex;
-    align-items: center;
+    padding: 40px 8%; /* Zmniejszony margines całej sekcji */
+    border-bottom: 1px solid #e2e8f0;
+    overflow: hidden;
 }
 
 .hero-container {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 50px;
+    gap: 40px;
     align-items: center;
-    width: 100%;
 }
 
 .badge {
-    color: #2563eb;
-    background-color: #eff6ff;
-    padding: 6px 14px;
-    border-radius: 30px;
+    color: #2563eb; /* Royal Blue */
     font-weight: 700;
     font-size: 13px;
+    letter-spacing: 0.5px;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .hero-text h1 {
-    font-size: 52px;
+    font-size: 46px;
     line-height: 1.15;
     color: #0f172a;
     font-weight: 800;
-    letter-spacing: -1px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .hero-description {
-    font-size: 17px;
+    font-size: 15px;
     color: #475569;
     line-height: 1.6;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    max-width: 520px;
 }
 
 .hero-features {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 35px;
+    gap: 15px;
+    margin-bottom: 30px;
     color: #334155;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 .hero-features span {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
 }
 
 .hero-features i {
-    color: #2563eb;
-    width: 18px;
-    height: 18px;
+    color: #2563eb; /* Royal Blue */
+    width: 16px;
+    height: 16px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 16px;
+    gap: 12px;
 }
 
-/* DYNAMICZNE, DUŻE ZDJĘCIE */
+.btn-primary {
+    background-color: #0b57d0; /* Royal Blue */
+    color: #ffffff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #1c54b2;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #0b57d0; /* Royal Blue */
+    border: 1px solid #0b57d0;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-block;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(11, 87, 208, 0.04);
+}
+
+/* LEPSZE DOPASOWANIE ZDJĘCIA (ZMNIEJSZENIE) */
 .hero-image-wrapper {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    max-height: 400px; /* Blokada wysokości zdjęcia */
 }
 
 .hero-main-img {
     width: 100%;
-    max-width: 500px; /* Duży, dopasowany rozmiar */
+    max-width: 420px; /* Zmniejszona szerokość z 480px na 420px */
     height: auto;
-    border-radius: 24px; /* Piękne zaokrąglenie */
+    max-height: 380px;
+    border-radius: 12px;
     object-fit: cover;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-/* KAFELKI STATYSTYK NA ZDJĘCIU */
 .hero-stats-sidebar {
     position: absolute;
-    right: -20px;
+    right: -25px; /* Przesunięcie kafelków na krawędź */
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 12px;
     z-index: 10;
 }
 
+/* POPRAWIONE KAFELKI STATYSTYK NA BŁĘKIT KRÓLEWSKI */
 .stat-box-premium {
-    background: #2563eb; /* Królewski błękit */
+    background: #2563eb; /* Zmienione z fioletu na Royal Blue */
     color: #ffffff;
-    padding: 16px 22px;
-    border-radius: 16px;
+    padding: 15px 20px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
-    gap: 14px;
-    min-width: 200px;
+    gap: 15px;
+    min-width: 190px;
     box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
 }
 
 .stat-box-premium i {
     width: 22px;
     height: 22px;
-    color: #ffffff;
+    opacity: 0.9;
+    color: #ffffff; /* Biała ikona */
 }
 
 .stat-box-premium h3 {
-    font-size: 22px;
-    font-weight: 800;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1;
 }
 
 .stat-box-premium p {
-    font-size: 12px;
-    opacity: 0.9;
+    font-size: 11px;
+    opacity: 0.85;
 }
 
-/* SIATKA KAFELKÓW OFERTY */
+/* SIATKA CZTERECH GŁÓWNYCH KAFELKÓW */
 .main-programmes {
-    padding: 80px 8%;
+    padding: 50px 8%;
     background-color: #f8fafc;
 }
 
 .programme-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
 }
 
 .programme-card {
     background: #ffffff;
-    padding: 35px;
-    border-radius: 18px;
+    padding: 25px;
+    border-radius: 10px;
     border: 1px solid #e2e8f0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
-    transition: transform 0.25s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .programme-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.04);
 }
 
+/* POPRAWIONE TŁO IKON W KAFELKACH NA BŁĘKIT */
 .icon-container-blue {
-    background: #eff6ff;
-    color: #2563eb;
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
+    background: #eff6ff; /* Bardzo jasny błękitny */
+    color: #2563eb; /* Royal Blue */
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-/* SEKCJA PRZEDMIOTÓW */
+.programme-card h3 {
+    font-size: 16px;
+    color: #0f172a;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.programme-card p {
+    color: #64748b;
+    font-size: 13px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.card-action-link {
+    color: #0b57d0; /* Royal Blue */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* PRZEDMIOTY I BANER CTA */
 .subjects-section {
-    padding: 80px 8%;
+    padding: 60px 8%;
     background: #ffffff;
 }
 
 .subjects-section h2 {
-    font-size: 32px;
+    font-size: 24px;
+    color: #0f172a;
+    margin-bottom: 30px;
     font-weight: 800;
-    margin-bottom: 40px;
 }
 
 .subjects-layout {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 40px;
+    gap: 35px;
 }
 
 .items-grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    gap: 12px;
 }
 
 .single-subject-box {
-    background-color: #f8fafc;
-    padding: 18px 24px;
-    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
     font-weight: 600;
+    font-size: 14px;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -278,26 +331,104 @@ nav {
 }
 
 .single-subject-box i {
-    color: #2563eb;
+    color: #2563eb; /* Royal Blue zamiast fioletu */
+    width: 18px;
+    height: 18px;
 }
 
-/* BANER REZERWACJI */
+/* BANER REZERWACJI (JASNONIEBIESKI Z MAKIETY) */
 .cta-banner-blue {
-    background-color: #dbeafe;
-    padding: 40px;
-    border-radius: 18px;
+    background-color: #dbeafe; 
+    padding: 35px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .cta-banner-blue h3 {
-    font-size: 24px;
+    font-size: 20px;
     color: #1e3a8a;
     font-weight: 800;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .cta-banner-blue p {
     color: #1e40af;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.cta-banner-blue .btn-primary {
+    align-self: flex-start;
+}
+
+.all-subjects-footer {
+    margin-top: 25px;
+}
+
+.all-subjects-footer a {
+    color: #0b57d0;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* ATUTY SZKOŁY PREMIUM (DOLNY PAS GRADIENTU) */
+.premium-benefits-bar {
+    padding: 35px 8%;
+    background: linear-gradient(90deg, #1e40af 0%, #3b82f6 100%); /* Pełny błękit królewski */
+    color: #ffffff;
+}
+
+.benefits-flex-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 25px;
+}
+
+.single-benefit {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.single-benefit i {
+    color: #ffffff;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.single-benefit h4 {
+    font-size: 14px;
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+.single-benefit p {
+    font-size: 12px;
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+/* STOPKA */
+footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+    border-top: 1px solid #1e293b;
+}
+
+/* RESPONSIVENOŚĆ NA TELEFONY */
+@media (max-width: 992px) {
+    .hero-container, .subjects-layout { grid-template-columns: 1fr; }
+    .hero-stats-sidebar { position: static; margin-top: 15px; width: 100%; }
+    .hero-text h1 { font-size: 34px; }
+    nav { flex-direction: column; gap: 12px; }
+}
